@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: ambre-3724
+    runtime: node
+    plan: free
+    buildCommand: echo "rien à installer"
+    startCommand: node server.js
+    healthCheckPath: /healthz
+    envVars:
+      - key: SERVER_NAME
+        value: Ambre 3724 - Serveur en ligne
+      - key: SERVER_MOTD
+        value: Une société née de l'ambre
+      - key: SERVER_MAX
+        value: "8"
